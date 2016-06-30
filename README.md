@@ -29,7 +29,7 @@ gulp.task('build', function () {
     return gulp.src('./css/*.css')
         .pipe(base64({
             baseDir: 'public',
-            extensions: ['svg', 'png', /\.jpg#datauri$/i],
+            extensions: ['svg', 'png', /\.jpg#datauri/i], // e.g. picture.svg, picture.png, picture.jpg#datauri
             exclude:    [/\.server\.(com|net)\/dynamic\//, '--live.jpg'],
             maxImageSize: 8*1024, // bytes,
             deleteAfterEncoding: false,
